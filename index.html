@@ -9,7 +9,7 @@
 <body>
     <header class="page-header">
         <div class="page-header__wrapper">
-            <a href="#" class="page-header__logo-link">pink</a>
+            <a href="#" class="page-header__logo-link" title="logo">pink</a>
             <nav class="main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__list-item">
@@ -26,7 +26,7 @@
                     </li>
                 </ul>
                 <!--close button will be added through js-->
-                <a href="#" class="main-nav__toogle  main-nav__toogle--state_close"></a>
+                <a href="#" class="main-nav__toogle  main-nav__toogle--state_close" title="close"></a>
             </nav>
         </div>
     </header>
@@ -38,34 +38,40 @@
             <div class="download">
                 <a href="#" class="download__download-link">Скачать приложение</a>
                 <div class="devices">
-                    <figure class="devices__item"><img class="devices__img" src="" alt="apple"></figure>
-                    <figure class="devices__item"><img class="devices__img" src="" alt="android"></figure>
-                    <figure class="devices__item"><img class="devices__img" src="" alt="windows"></figure>
+                    <figure class="devices__item">
+                        <a href="#" class="devices__item-link" title="apple"><img class="devices__img" src="" alt="apple"></a>
+                    </figure>
+                    <figure class="devices__item">
+                        <a href="#" class="devices__item-link" title="android"><img class="devices__img" src="" alt="android"></a>
+                    </figure>
+                    <figure class="devices__item">
+                        <a href="#" class="devices__item-link" title="windows"><img class="devices__img" src="" alt="windows"></a>
+                    </figure>
                 </div>
                 <p class="download__descr">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
             </div>
         </div>
     </section>
     <section class="information">
-        <div class="information-header">
+        <header class="information-header">
             <div class="information-header__wrapper">
                 <p class="information-header__text">Устали от серости мегаполиса?</p>
                 <p class="information-header__text">Нам есть, что вам предложить!</p>
             </div>
-        </div>
+        </header>
         <div class="information-inner">
             <div class="information-inner__wrapper">
                 <div class="descr-capabilities">
                     <div class="descr-capabilities__item">
-                        <div class="descr-capabilities__header">Поднимает настроение</div>
+                        <header class="descr-capabilities__header">Поднимает настроение</header>
                         <p class="descr-capabilities__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
                     </div>
                     <div class="descr-capabilities__item">
-                        <div class="descr-capabilities__header">Меняет мир вокруг</div>
+                        <header class="descr-capabilities__header">Меняет мир вокруг</header>
                         <p class="descr-capabilities__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
                     </div>
                     <div class="descr-capabilities__item">
-                        <div class="descr-capabilities__header">Заводит новых друзей</div>
+                        <header class="descr-capabilities__header">Заводит новых друзей</header>
                         <p class="descr-capabilities__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
                     </div>
                 </div>
@@ -95,6 +101,16 @@
                 <article class="slider-reviews__item">
                     <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                     <h1 class="slider-reviews__name">Николай Петров</h1>
+                    <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
+                </article>
+                <article class="slider-reviews__item">
+                    <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    <h1 class="slider-reviews__name">Николай Петров-2</h1>
+                    <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
+                </article>
+                <article class="slider-reviews__item">
+                    <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                    <h1 class="slider-reviews__name">Николай Петров-3</h1>
                     <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
                 </article>
                 <div class="slider-reviews__paginator">
@@ -145,34 +161,42 @@
             <div class="write-us__header">
                 Остались вопросы? Свяжитесь с нами!
             </div>
-            <div class="write-us__phone"><span class="write-us__title">Звоните:</span><a href="tel:8(800)1000900" class="write-us__tell">8 (800) 1000 900</a></div>
-            <div class="write-us__write"><span class="write-us__title">Пишите:</span><a href="mailto:hello@pinkapp.ru" class="write-us__mail">hello@pinkapp.ru</a></div>
-            <div class="write-us__come"><span class="write-us__title">Приезжайте в гости:</span><span class="write-us__address">Санкт-Петербург, 
-Невский проспект, д. 20</span></div>
+            <div class="write-us__phone">
+                <header class="write-us__title">Звоните:</header><a href="tel:8(800)1000900" class="write-us__tell">8 (800) 1000 900</a>
+            </div>
+            <div class="write-us__write">
+                <header class="write-us__title">Пишите:</header><a href="mailto:hello@pinkapp.ru" class="write-us__mail">hello@pinkapp.ru</a>
+            </div>
+            <div class="write-us__come">
+                <header class="write-us__title">Приезжайте в гости:</header><span class="write-us__address">Санкт-Петербург, 
+Невский проспект, д. 20</span>
+            </div>
         </div>
     </section>
-    <div class="map"></div>
+    <div class="map">
+        <div class="map__wrapper"></div>
+    </div>
     <!--Page footer-->
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <div class="page-footer__logo-wrapper">
-                <a href="#" class="page-footer__logo-link">
+                <a href="#" class="page-footer__logo-link" title="logo">
                     <img src="" alt="footer-logo" class="page-footer__logo-img">
                 </a>
             </div>
             <div class="page-footer__social-wrapper">
-                <a href="#" class="page-footer__soc-twitter"></a>
-                <a href="#" class="page-footer__soc-fb"></a>
-                <a href="#" class="page-footer__soc-tr"></a>
+                <a href="#" class="page-footer__soc-twitter" title="twitter"></a>
+                <a href="#" class="page-footer__soc-fb" title="facebook"></a>
+                <a href="#" class="page-footer__soc-tr" title="video"></a>
             </div>
             <div class="page-footer__copy-right-wrapper">
                 <div class="page-footer__by">
                     Website by
-                    <a href="#" class="page-footer__by-link"></a>
+                    <a href="#" class="page-footer__by-link" title="vendor"></a>
                 </div>
                 <div class="page-footer__for">
                     for
-                    <a href="#" class="page-footer__for-link"></a>
+                    <a href="#" class="page-footer__for-link" title="customer"></a>
                 </div>
             </div>
         </div>
