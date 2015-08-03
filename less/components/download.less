@@ -1,0 +1,37 @@
+.download {
+  padding-top: 30px;  
+  padding-bottom: 35px;
+  background: @backgoround-color--dark;
+  &__download-link {
+    display: block;
+    width: 274px;
+    height: 49px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border: 3px solid @backgoround-color--light;
+    border-radius: 35px;
+    .a-decoration;
+    font-size: @font-size--regular;
+    font-weight: @weight-semi-bold;
+    line-height: 45px;
+    color: @text-color--white;
+    text-align: center;
+    &:hover {
+      background: @backgoround-color--light;
+      color: @text-color;
+    } 
+    &:active {
+      background: @backgoround-color--light;
+      color: @text-color--red;
+    }
+  }
+  &__descr {
+    padding: 0 6%;
+    font-family: @font-family;
+    font-size: @font-size--small - .12;
+    font-weight: @weight-normal;
+    line-height: @font-family;
+    color: @text-color--white;
+    text-align: center;
+  }
+}

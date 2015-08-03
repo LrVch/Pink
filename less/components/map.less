@@ -1,0 +1,20 @@
+.map {
+    min-height: 200px;
+    &__inner {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        height: 200px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    &__svg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        polygon {
+            fill: #fff;
+        }
+    }
+}

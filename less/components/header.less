@@ -1,0 +1,63 @@
+.header {
+    background: fade(@backgoround-color--black, 50%);
+    margin-bottom: 22px;
+    &__wrapper {
+        //.center; //test
+    }
+    &__inner {
+        position: relative;
+        min-height: 65px;
+        padding: 0 6.25%;
+        border-bottom: 1px solid transparent;
+        .clearfix;
+        &--state_active {
+            border-bottom: 1px solid @backgoround-color--black;
+            background: @backgoround-color--extra-dark;
+        }
+    }
+    &__logo-link {
+        position: relative;
+        float: left;
+        &:before {
+            .pseudo-absolute-elem;
+            width: 74px;
+            height: 23px;
+            left: 0;
+            bottom: -43px;
+            background: url("@{dirsvg}/logo-main--mobile-white.svg") no-repeat;
+        }
+    } 
+    &__toogle {
+        position: relative;
+        float: right;
+        &:before {
+            .pseudo-absolute-elem;
+            width: 50px;
+            height: 24px;
+            right: 0;
+            bottom: -43px;
+            background: url("@{dirsvg}/btn-main-menu__mobile.svg") no-repeat;
+        }
+        &:hover:before {
+            background: url("@{dirsvg}/btn-main-menu__mobile--hover.svg") no-repeat;
+        }
+        &:active:before {
+            background: url("@{dirsvg}/btn-main-menu__mobile--active.svg") no-repeat;
+        }
+        &--state_close {
+            &:before {
+                width: 30px;
+                height: 30px;
+                right: 0;
+                bottom: -47px;
+                background: url("@{dirsvg}/icon-close.svg") no-repeat;
+            }
+            &:hover:before {
+                background: url("@{dirsvg}/icon-close--hover.svg") no-repeat;
+            }
+            &:active:before {
+                background: url("@{dirsvg}/icon-close--active.svg") no-repeat;
+            }
+        }
+    }
+}

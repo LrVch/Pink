@@ -1,0 +1,38 @@
+@import "variables.less";
+@import "components/mixin.less";
+//=============================================
+.page-header {
+    margin-top: 256px;
+    background-image: url("@{dir}/background-mobile@1x.jpg");
+    background-size: auto;
+}
+
+.header {
+    &__inner {
+        background: @backgoround-color--extra-dark;
+    }
+    &__toogle {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.header-nav {
+    top: -256px;
+    left: 0;
+}
+
+.paginator {
+    &__item {
+        display: none;
+        background: #000;
+    }
+}
+
+.price-table {
+    &__inner {
+        width: 100%;
+        margin-left: 0%;
+    }
+}

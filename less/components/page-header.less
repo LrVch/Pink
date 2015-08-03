@@ -1,0 +1,29 @@
+/*===========================================================*/
+
+
+/*page-header*/
+
+
+/*===========================================================*/
+
+.page-header {
+    width: 100%;
+    background-color: @backgoround-color--extra-dark; 
+    background-image: url("@{dir}/background-mobile@1x.jpg");
+    background-size: 700px auto;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    @media @retina {
+        background-image: url("@{dir}/background-mobile@2x.jpg");
+    }
+    &__wrapper {
+        background-image: url("@{dir}/iphone-hand-mobile@1x.png");
+        background-size: 258px auto;
+        background-position: left 181px;
+        background-repeat: no-repeat;
+        .center;
+        @media @retina {
+            background-image: url("@{dir}/iphone-hand-mobile@2x.png");
+        }
+    }
+} 

@@ -1,0 +1,40 @@
+.header-nav { 
+    position: absolute;
+    top: 66px;
+    left: -100%;
+    width: 100%;
+    transition: .3s;
+    &__list {
+        margin: 0;
+        padding: 0;
+        &-item { 
+            list-style-type: none;
+            height: 62px;
+            border-top: 1px solid lighten(@backgoround-color--extra-dark, 12%);
+            border-bottom: 1px solid darken(@backgoround-color--extra-dark, 20%);
+            text-align: center;
+            background: @backgoround-color--extra-dark;
+            a {
+                display: block;
+                line-height: 62px;
+                font-family: @font-family;
+                font-size: @font-size--regular;
+                color: @text-color--white;
+                .a-decoration;
+                text-transform: uppercase;
+                &:hover {
+                    color: @text-color--red;
+                }
+                &:active {
+                    color: darken(@text-color--red, 20%);
+                }
+            }
+            &:active {
+                background: lighten(@backgoround-color--extra-dark, 10%);
+            }
+        }
+    }
+    &--state_active {
+        left: 0%;
+    }
+}

@@ -4,7 +4,7 @@
 <svg version="1.1" id="twitter_2_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="19px" height="15px" viewBox="0 0 19 15" style="enable-background:new 0 0 19 15;" xml:space="preserve">
 <defs>
-	<path id="SVGID_1_" style="enable-background:new    ;" d="M18.354,2.482c-0.656,0.285-1.359,0.478-2.099,0.564
+	<path  id="SVGID_1_" style="enable-background:new;" d="M18.354,2.482c-0.656,0.285-1.359,0.478-2.099,0.564
 		c0.754-0.443,1.333-1.146,1.606-1.983c-0.706,0.411-1.488,0.71-2.32,0.87c-0.666-0.696-1.616-1.132-2.667-1.132
 		c-2.018,0-3.654,1.604-3.654,3.585c0,0.28,0.033,0.555,0.095,0.816c-3.036-0.148-5.728-1.576-7.53-3.745
 		C1.47,1.987,1.29,2.603,1.29,3.261c0,1.243,0.645,2.34,1.625,2.983c-0.599-0.02-1.162-0.18-1.655-0.448c0,0.015,0,0.029,0,0.045
@@ -17,7 +17,7 @@
 	<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 </clipPath>
 <g style="clip-path:url(#SVGID_2_);">
-	<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M18.855,14.964c-6.391,0-12.531,0-18.71,0c0-4.952,0-9.903,0-14.928
+	<path fill="#d22856" d="M18.855,14.964c-6.391,0-12.531,0-18.71,0c0-4.952,0-9.903,0-14.928
 		c6.217,0,12.476,0,18.71,0C18.855,4.97,18.855,9.972,18.855,14.964z"/>
 </g>
 </svg>

@@ -3,57 +3,68 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Pink</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
+    <noscript>
+        <link rel="stylesheet" href="css/noscript.css">
+    </noscript>
 </head>
 
 <body>
     <header class="page-header">
         <div class="page-header__wrapper">
-            <a href="#" class="page-header__logo-link" title="logo"></a>
-            <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__list-item">
-                        <a href="#">Информация</a>
-                    </li>
-                    <li class="main-nav__list-item">
-                        <a href="#">Возможности</a>
-                    </li>
-                    <li class="main-nav__list-item">
-                        <a href="#">Отзывы</a>
-                    </li>
-                    <li class="main-nav__list-item">
-                        <a href="#">Стоимость</a>
-                    </li>
-                </ul>
-                <!--close button will be added through js-->
-                <a href="#" class="main-nav__toogle  main-nav__toogle--state_close" title="close"></a>
-            </nav>
+            <div class="header">
+                <div class="header__wrapper">
+                    <div class="header__inner">
+                        <a href="#" class="header__logo-link" title="logo"></a>
+                        <nav class="header-nav">
+                            <ul class="header-nav__list">
+                                <li class="header-nav__list-item">
+                                    <a href="#">Информация</a>
+                                </li>
+                                <li class="header-nav__list-item">
+                                    <a href="#">Возможности</a>
+                                </li>
+                                <li class="header-nav__list-item">
+                                    <a href="#">Отзывы</a>
+                                </li>
+                                <li class="header-nav__list-item">
+                                    <a href="#">Стоимость</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="header__toogle" title="close"></a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="intro">
+                <div class="intro__wrapper">
+                    <div class="intro-header">
+                        <h1 class="intro-header__title">Взгляните на жизнь<br> иначе!</h1>
+                    </div>
+                    <div class="download">
+                        <a href="#" class="download__download-link">Скачать приложение</a>
+                        <div class="devices">
+                            <figure class="devices__item">
+                                <a href="#" class="devices__item-link" title="apple"><img class="devices__img" src="img/svg/logo-apple.svg" alt="apple"></a>
+                            </figure>
+                            <figure class="devices__item">
+                                <a href="#" class="devices__item-link" title="android"><img class="devices__img" src="img/svg/logo-android.svg" alt="android"></a>
+                            </figure>
+                            <figure class="devices__item">
+                                <a href="#" class="devices__item-link" title="windows"><img class="devices__img" src="img/svg/logo-microsoft.svg" alt="windows"></a>
+                            </figure>
+                        </div>
+                        <p class="download__descr">Доступно&nbsp;для&nbsp;iPhone,&nbsp;iPad,&nbsp;Android,&nbsp;Windows phone, Mac&nbsp;OS, Windows&nbsp;8</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </header>
-    <section class="intro">
-        <div class="intro__wrapper">
-            <div class="intro-header">
-                <h1 class="intro-header__title">Взгляните на жизнь иначе!</h1>
-            </div>
-            <div class="download">
-                <a href="#" class="download__download-link">Скачать приложение</a>
-                <div class="devices">
-                    <figure class="devices__item">
-                        <a href="#" class="devices__item-link" title="apple"><img class="devices__img" src="" alt="apple"></a>
-                    </figure>
-                    <figure class="devices__item">
-                        <a href="#" class="devices__item-link" title="android"><img class="devices__img" src="" alt="android"></a>
-                    </figure>
-                    <figure class="devices__item">
-                        <a href="#" class="devices__item-link" title="windows"><img class="devices__img" src="" alt="windows"></a>
-                    </figure>
-                </div>
-                <p class="download__descr">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
-            </div>
-        </div>
-    </section>
+
     <section class="information">
         <header class="information-header">
             <div class="information-header__wrapper">
@@ -78,13 +89,31 @@
                     </div>
                 </div>
                 <div class="capabilities">
-                    <figure class="capabilities__item"><img src="" alt="stock-photo" class="capabilities__img"></figure>
-                    <!--<figure class="capabilities__item"><img src="" alt="custom-photo" class="capabilities__img"></figure>
-                    <figure class="capabilities__item"><img src="" alt="smile-photo" class="capabilities__img"></figure>-->
+
+                    <figure class="capabilities__item  capabilities__item--hidden">
+                        <img src="img/iphone-screen-desktop-1@1x.png" class="capabilities__img  capabilities__img--desktop  capabilities__img--desktop_normal" alt="stock-photo">
+                        <img src="img/iphone-screen-desktop-1@2x.png" class="capabilities__img  capabilities__img--desktop capabilities__img--desktop_retina" alt="stock-photo">
+                    </figure>
+
+                    <figure class="capabilities__item  capabilities__item--hidden">
+                        <img src="img/iphone-screen-desktop-2@1x.png" alt="custom-photo" class="capabilities__img  capabilities__img--desktop  capabilities__img--desktop_normal">
+                        <img src="img/iphone-screen-desktop-2@2x.png" alt="custom-photo" class="capabilities__img  capabilities__img--desktop  capabilities__img--desktop_retina">
+                    </figure>
+
+                    <figure class="capabilities__item">
+                        <img src="img/iphone-screen-mobile-3@1x.png" alt="smile-photo" class="capabilities__img  capabilities__img--mobile  capabilities__img --mobile_normal">
+                        <img src="img/iphone-screen-mobile-3@2x.png" alt="smile-photo" class="capabilities__img  capabilities__img--mobile  capabilities__img--mobile_retina">
+                        <img src="img/iphone-screen-tablet-3@1x.png" alt="smile-photo" class="capabilities__img  capabilities__img--tablet  capabilities__img--tablet_normal">
+                        <img src="img/iphone-screen-tablet-3@2x.png" alt="smile-photo" class="capabilities__img  capabilities__img--tablet  capabilities__img--tablet_retina">
+                        <img src="img/iphone-screen-desktop-3@1x.png" alt="smile-photo" class="capabilities__img  capabilities__img--desktop  capabilities__img--desktop_normal">
+                        <img src="img/iphone-screen-desktop-3@2x.png" alt="smile-photo" class="capabilities__img  capabilities__img--desktop  capabilities__img--desktop_retina">
+                    </figure>
+
                 </div>
             </div>
         </div>
     </section>
+
     <section class="features">
         <div class="features__wrapper">
             <div class="features__img-wrapper">
@@ -100,64 +129,72 @@
     <section class="reviews">
         <div class="reviews__wrapper">
             <div class="slider-reviews">
-                <article class="slider-reviews__item">
-                    <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    <h1 class="slider-reviews__name">Николай Петров</h1>
-                    <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
-                </article>
-                <article class="slider-reviews__item">
-                    <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    <h1 class="slider-reviews__name">Николай Петров-2</h1>
-                    <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
-                </article>
-                <article class="slider-reviews__item">
-                    <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                    <h1 class="slider-reviews__name">Николай Петров-3</h1>
-                    <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
-                </article>
-                <div class="slider-reviews__paginator">
-                    <i class="slider-reviews__paginator-item  slider-reviews__paginator-item--state_active"></i>
-                    <i class="slider-reviews__paginator-item"></i>
-                    <i class="slider-reviews__paginator-item"></i>
+                <div class="slider-reviews__inner">
+                    <article class="slider-reviews__item">
+                        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                        <h1 class="slider-reviews__name">Николай Петров</h1>
+                        <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
+                    </article>
+                    <article class="slider-reviews__item">
+                        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                        <h1 class="slider-reviews__name">Николай&nbsp;Петров-2</h1>
+                        <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
+                    </article>
+                    <article class="slider-reviews__item">
+                        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                        <h1 class="slider-reviews__name">Николай&nbsp;Петров-3</h1>
+                        <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
+                    </article>
+                </div>
+            </div>
+            <div class="paginator  paginator--reviews">
+                <i class="paginator__item  paginator__item--state_active" id="btnReviews_1"></i>
+                <i class="paginator__item" id="btnReviews_2"></i>
+                <i class="paginator__item" id="btnReviews_3"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="price">
+        <div class="price__wrapper">
+            <div class="price__inner">
+                <div class="price-table">
+                    <table class="price-table__inner">
+                        <tr class="price-table__row">
+                            <td class="price-table__col  price-table__col-1--row-1"><span class="price-table__title"></span></td>
+                            <td class="price-table__col  price-table__col-2--row-1"><span class="price-table__title">База<br></span>1,99 USD</td>
+                            <td class="price-table__col  price-table__col-3--row-1"><span class="price-table__title">Стандарт<br></span>3,99 USD</td>
+                            <td class="price-table__col  price-table__col-4--row-1"><span class="price-table__title">Анлим<br></span>9,99 USD</td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__col  price-table__col-1--row-2">Розовый фильтр</td>
+                            <td class="price-table__col  price-table__col-2--row-2" data-label="Розовый фильтр"></td>
+                            <td class="price-table__col  price-table__col-3--row-2" data-label="Розовый фильтр"></td>
+                            <td class="price-table__col  price-table__col-4--row-2" data-label="Розовый фильтр"></td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__col  price-table__col-1--row-3">Смайлики</td>
+                            <td class="price-table__col  price-table__col-2--row-3" data-label="Смайлики"></td>
+                            <td class="price-table__col  price-table__col-3--row-3" data-label="Смайлики"></td>
+                            <td class="price-table__col  price-table__col-4--row-3" data-label="Смайлики"></td>
+                        </tr>
+                        <tr class="price-table__row">
+                            <td class="price-table__col  price-table__col-1--row-4">Комментарии</td>
+                            <td class="price-table__col  price-table__col-2--row-4" data-label="Коментарии"></td>
+                            <td class="price-table__col  price-table__col-3--row-4" data-label="Коментарии"></td>
+                            <td class="price-table__col price-table__col-4--row-4" data-label="Коментарии"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="paginator paginator--table">
+                    <i class="paginator__item" id="btnTable_1"></i>
+                    <i class="paginator__item  paginator__item--state_active" id="btnTable_2"></i>
+                    <i class="paginator__item" id="btnTable_3"></i>
                 </div>
             </div>
         </div>
     </section>
-    <section class="price">
-        <div class="price__wrapper">
-            <table class="price-table">
-                <tr class="price-table__row">
-                    <td class="price-table__col-1  price-table__col-1--row-1"><span class="price-table__title"></span></td>
-                    <td class="price-table__col-2  price-table__col-2--row-1"><span class="price-table__title">База</span>1,99 USD</td>
-                    <td class="price-table__col-3  price-table__col-3--row-1"><span class="price-table__title">Стандарт</span>3,99 USD</td>
-                    <td class="price-table__col-4  price-table__col-4--row-1"><span class="price-table__title">Анлим</span>9,99 USD</td>
-                </tr>
-                <tr class="price-table__row">
-                    <td class="price-table__col-1  price-table__col-1--row-2">Розовый фильтр</td>
-                    <td class="price-table__col-2  price-table__col-2--row-2"></td>
-                    <td class="price-table__col-3  price-table__col-3--row-2"></td>
-                    <td class="price-table__col-4  price-table__col-4--row-2"></td>
-                </tr>
-                <tr class="price-table__row">
-                    <td class="price-table__col-1  price-table__col-1--row-3">Смайлики</td>
-                    <td class="price-table__col-2  price-table__col-2--row-3"></td>
-                    <td class="price-table__col-3  price-table__col-3--row-3"></td>
-                    <td class="price-table__col-4  price-table__col-4--row-3"></td>
-                </tr>
-                <tr class="price-table__row">
-                    <td class="price-table__col-1  price-table__col-1--row-4">Комментарии</td>
-                    <td class="price-table__col-2  price-table__col-2--row-4"></td>
-                    <td class="price-table__col-3  price-table__col-3--row-4"></td>
-                    <td class="price-table__col-4  price-table__col-4--row-4"></td>
-                </tr>
-            </table>
-            <div class="price__paiginator">
-                <i class="price__paiginator-item"></i>
-                <i class="price__paiginator-item  price__paiginator-item--state_active"></i>
-                <i class="price__paiginator-item"></i>
-            </div>
-        </div>
-    </section>
+
     <section class="write-us">
         <div class="write-us__wrapper">
             <div class="write-us__header">
@@ -171,25 +208,30 @@
             </div>
             <div class="write-us__come">
                 <header class="write-us__title">Приезжайте в гости:</header><span class="write-us__address">Санкт-Петербург, 
-Невский проспект, д. 20</span>
+Невский&nbsp;проспект, д. 20</span>
             </div>
         </div>
     </section>
+
     <div class="map">
-        <div class="map__wrapper"></div>
+        <div class="map__wrapper">
+            <div class="map__inner" id="map">
+                <svg xmlns="http://www.w3.org/2000/svg" class="map__svg" x="0" y="0" viewBox="0 0 320 30" preserveAspectRatio="none">
+                    <polygon points="0,0 320,0 160,30" />
+                </svg>
+            </div>
+        </div>
     </div>
-    <!--Page footer-->
+
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <div class="page-footer__logo-wrapper">
-                <a href="#" class="page-footer__logo-link" title="logo">
-                    <img src="" alt="footer-logo" class="page-footer__logo-img">
-                </a>
+                <a href="#" class="page-footer__logo-link" title="logo"></a>
             </div>
             <div class="page-footer__social-wrapper">
-                <a href="#" class="page-footer__soc-twitter" title="twitter"></a>
-                <a href="#" class="page-footer__soc-fb" title="facebook"></a>
-                <a href="#" class="page-footer__soc-tr" title="video"></a>
+                <a href="#" class="page-footer__social-link  page-footer__social-link--twitter" title="twitter"></a>
+                <a href="#" class="page-footer__social-link  page-footer__social-link--fb" title="facebook"></a>
+                <a href="#" class="page-footer__social-link  page-footer__social-link--vd" title="video"></a>
             </div>
             <div class="page-footer__copy-right-wrapper">
                 <div class="page-footer__by">
@@ -203,6 +245,8 @@
             </div>
         </div>
     </footer>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

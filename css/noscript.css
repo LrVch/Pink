@@ -1,0 +1,23 @@
+.page-header {
+  margin-top: 256px;
+  background-image: url("../img/background-mobile@1x.jpg");
+  background-size: auto;
+}
+.header__inner {
+  background: #283645;
+}
+.header__toogle:before {
+  display: none;
+}
+.header-nav {
+  top: -256px;
+  left: 0;
+}
+.paginator__item {
+  display: none;
+  background: #000;
+}
+.price-table__inner {
+  width: 100%;
+  margin-left: 0%;
+}

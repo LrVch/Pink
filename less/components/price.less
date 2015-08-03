@@ -1,0 +1,19 @@
+.price {
+    background: @backgoround-color--grey;
+    &__wrapper {
+        .center;
+    }
+    &__inner {
+        padding-top: 90px;
+        padding-bottom: 45px;
+        background-image: url("@{dirsvg}/triangle-white.svg");
+        background-size: 100% 35px;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        @media @screen-md {
+            padding-right: 6.25%;
+            padding-left: 6.25%;
+            padding-bottom: 68px;
+        } 
+    }  
+}
