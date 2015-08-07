@@ -1,14 +1,49 @@
+/*******************************************************/
+
+
+/* intro-header */
+
+
+/*******************************************************/
+
 .intro-header {
-  &__title {
-    //.debug;
-    margin: 0;
-    margin-bottom: 315px;
-    padding: 0 10%;
-    font-family: @font-family;
-    font-size: @font-size--big - .2;
-    font-weight: @weight-normal;
-    line-height: @font-size--big + .8;
-    text-align: center;
-    color: @text-color--white;
-  }
-} 
+    @media @screen-md {
+        //.debug;
+        padding: 0;
+        padding-left: 13.3%;
+        padding-right: 60%;
+        padding-top: 90px;
+    }
+    @media @screen-lg {
+        padding-top: 110px;
+        padding-left: 0;
+        padding-right: 640px;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 315px;
+        padding: 0 10%;
+        font-family: @font-family;
+        font-size: @font-size--big - .2;
+        font-weight: @weight-normal;
+        line-height: @font-size--big + .8;
+        text-align: center;
+        color: @text-color--white;
+        @media @screen-md {
+            //.debug;
+            margin-bottom: 30px;
+            padding: 0;
+            font-size: @font-size--big + 1.4;
+            font-weight: @weight-light;
+            line-height: @font-size--big + 2.5;
+            text-align: center;
+        }
+        @media @screen-lg {
+            margin-bottom: 45px;
+            padding: 0;
+            font-size: @font-size--big * 2 + .2;
+            line-height: @font-size--big * 2 + 1.2;
+            //.debug;
+        }
+    }
+}

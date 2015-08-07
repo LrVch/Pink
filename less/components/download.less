@@ -1,37 +1,76 @@
+/*******************************************************/
+
+
+/* download */
+
+
+/*******************************************************/
+
 .download {
-  padding-top: 30px;  
-  padding-bottom: 35px;
-  background: @backgoround-color--dark;
-  &__download-link {
-    display: block;
-    width: 274px;
-    height: 49px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    border: 3px solid @backgoround-color--light;
-    border-radius: 35px;
-    .a-decoration;
-    font-size: @font-size--regular;
-    font-weight: @weight-semi-bold;
-    line-height: 45px;
-    color: @text-color--white;
-    text-align: center;
-    &:hover {
-      background: @backgoround-color--light;
-      color: @text-color;
-    } 
-    &:active {
-      background: @backgoround-color--light;
-      color: @text-color--red;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    background: @backgoround-color--dark;
+    @media @screen-md {
+        //.debug;
+        padding-top: 0;
+        padding-left: 6%;
+        padding-right: 52%;
+        padding-bottom: 90px;
+        background: none;
     }
-  }
-  &__descr {
-    padding: 0 6%;
-    font-family: @font-family;
-    font-size: @font-size--small - .12;
-    font-weight: @weight-normal;
-    line-height: @font-family;
-    color: @text-color--white;
-    text-align: center;
-  }
+    @media @screen-lg {
+        padding: 0;
+        padding-right: 640px;
+        padding-bottom: 105px;
+    }
+    &__download-link {
+        //.debug;
+        display: block;
+        width: 274px;
+        height: 49px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        border: 3px solid @backgoround-color--light;
+        border-radius: 35px;
+        .a-decoration;
+        font-size: @font-size--regular;
+        font-weight: @weight-semi-bold;
+        line-height: 45px;
+        color: @text-color--white;
+        text-align: center;
+        @media @screen-md {
+            margin: 0 auto;
+            margin-bottom: 44px;
+        }
+        @media @screen-lg {
+            //.debug;
+            width: 300px;
+            margin-bottom: 65px;
+            font-size: @font-size--regular + .3;
+            &:hover {
+                background: @backgoround-color--light;
+                color: @text-color;
+            }
+        }
+        &:active {
+            background: @backgoround-color--light;
+            color: @text-color--red;
+        }
+    }
+    &__descr {
+        padding: 0 6%;
+        font-family: @font-family;
+        font-size: @font-size--small - .12;
+        font-weight: @weight-normal;
+        line-height: @font-size--small + .8;
+        color: @text-color--white;
+        text-align: center;
+        @media @screen-md {
+            //.debug;
+            padding: 0;
+            font-size: @font-size--regular - .2;
+            line-height: @font-size--regular + .5;
+            ;
+        }
+    }
 }

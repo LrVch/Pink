@@ -3,18 +3,15 @@
 //=============================================
 .page-header {
     margin-top: 256px;
-    background-image: url("@{dir}/background-mobile@1x.jpg");
-    background-size: auto;
+    @media @screen-lg {
+        margin-top: 0;
+    }
 }
 
 .header {
-    &__inner {
-        background: @backgoround-color--extra-dark;
-    }
+    &__inner {}
     &__toogle {
-        &:before {
-            display: none;
-        }
+        display: none;
     }
 }
 
@@ -35,4 +32,8 @@
         width: 100%;
         margin-left: 0%;
     }
+}
+
+.map {
+    display: none;
 }

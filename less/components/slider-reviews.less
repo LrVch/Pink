@@ -1,3 +1,11 @@
+/*******************************************************/
+
+
+/* slider-reviews */
+
+
+/*******************************************************/
+
 .slider-reviews {
     overflow: hidden;
     max-width: 700px;
@@ -5,7 +13,55 @@
     @media @screen-md {
         max-width: none;
     }
+    &__wrapper {
+        //.debug;
+        @media @screen-lg {
+            position: relative;
+            padding-top: 70px;
+        }
+    }
+    &__quotes {
+        display: none;
+        @media @screen-lg {
+            //.debug;
+            display: block;
+            width: 80px;
+            height: 70px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 55px;
+            &-path {
+                fill: #efefef;
+            }
+        }
+    }
+    &__arrow {
+        display: none;
+        @media @screen-lg {
+            display: block;
+            position: absolute;
+            top: 210px;
+            width: 20px;
+            height: 50px;
+            cursor: pointer;
+            //.debug;
+            &--left {
+                left: 0;
+            }
+            &-img {
+                width: 20px;
+                height: 50px;
+                line {
+                    stroke: red;
+                }
+            }
+            &--right {
+                right: 0;
+            }
+        }
+    }
     &__inner {
+        //.debug;
         .clearfix;
         width: 300%;
         margin: 0 auto;
@@ -23,8 +79,15 @@
         padding-top: 95px;
         width: 33.33333333%;
         text-align: center;
+        @media @screen-md {
+            padding-top: 72px;
+        }
+        @media @screen-lg {
+            padding: 0;
+        }
     }
     p {
+        //.debug;
         margin: 0;
         padding: 0 6.25%;
         font-family: @font-family;
@@ -33,8 +96,12 @@
         line-height: @font-size--small + 1.6;
         color: @text-color;
         @media @screen-md {
+            margin-bottom: 35px;
             padding: 0 5.7%;
             font-size: @font-size--regular;
+        }
+        @media @screen-lg {
+            padding: 0 90px;
         }
     }
     &__name {
@@ -49,6 +116,12 @@
         font-weight: @weight-bold;
         line-height: @font-size--regular;
         color: @text-color;
+        @media @screen-md {
+            position: static;
+            margin-bottom: 15px;
+            transform: none;
+            font-size: @font-size--regular + .3;
+        }
     }
     &__user-info {
         display: none;
@@ -57,5 +130,9 @@
         font-weight: @weight-normal;
         line-height: @font-size--small;
         color: @text-color;
+        @media @screen-md {
+            display: block;
+            margin-bottom: 7px;
+        }
     }
 }

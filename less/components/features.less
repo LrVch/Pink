@@ -1,3 +1,112 @@
+/*******************************************************/
+
+
+/* features*/
+
+
+/*******************************************************/
+
 .features {
     display: none;
+    @media @screen-md {
+        display: block;
+        font-family: @font-family;
+    }
+    @media @screen-lg {
+        background: @backgoround-color--grey;
+        padding-bottom: 65px;
+    }
+    &__wrapper {
+        .container;
+        //.debug;
+        @media @screen-md {
+            .clearfix;
+            padding: 0 5.7%;
+        }
+        @media @screen-lg {
+            padding: 0 10px;
+        }
+    }
+    &__img-wrapper {
+        @media @screen-md {
+            float: left;
+            padding-top: 50px;
+        }
+        @media @screen-lg {
+            padding-top: 65px;
+        }
+    }
+    &__img {
+        @media @screen-md {
+            width: 260px;
+            height: 300px;
+        }
+        @media @screen-lg {
+            //.debug;
+            width: 300px;
+            height: 350px;
+            &-diagram {
+                fill: #dedede;
+            }
+        }
+    }
+    &__descr-wrapper {
+        @media @screen-md {
+            //.debug;
+            float: right;
+            width: 50%;
+            padding-top: 90px;
+        }
+        @media @screen-lg {
+            width: 575px;
+            padding-top: 160px;
+        }
+    }
+    &__header {
+        @media @screen-md {
+            //.debug;
+            margin: 0;
+            margin-bottom: 15px;
+            padding: 0;
+            padding-right: 5%;
+            font-weight: @weight-bold;
+            font-size: @font-size--big + .7;
+            line-height: @font-size--big + 1;
+            color: @text-color;
+        }
+        @media @screen-lg {
+            margin-bottom: 22px;
+        }
+    }
+    &__text {
+        @media @screen-md {
+            //.debug;
+            margin: 0;
+            margin-bottom: 15px;
+            padding: 0;
+            font-weight: @weight-normal;
+            font-size: @font-size--small;
+            line-height: @font-size--small + 1;
+            color: @text-color;
+        }
+        @media @screen-lg {
+            margin-bottom: 25px;
+            font-size: @font-size--regular;
+            line-height: @font-size--regular + 1.2;
+        }
+    }
+    &__link {
+        @media @screen-md {
+            margin: 0;
+            padding: 0;
+            font-weight: @weight-normal;
+            font-size: @font-size--small;
+            line-height: @font-size--small;
+            color: @text-color--red;
+        }
+        @media @screen-lg {
+            font-size: @font-size--regular;
+            line-height: @font-size--regular;
+        }
+    }
 }

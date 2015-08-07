@@ -4,6 +4,8 @@ var headerNav = document.querySelector(".header-nav");
 var btnReviews_1 = document.querySelector("#btnReviews_1");
 var btnReviews_2 = document.querySelector("#btnReviews_2");
 var btnReviews_3 = document.querySelector("#btnReviews_3");
+var arrowLeft = document.querySelector("#left");
+var arrowRight = document.querySelector("#right");
 var sliderReviews = document.querySelector(".slider-reviews__inner");
 var btnTable_1 = document.querySelector("#btnTable_1");
 var btnTable_2 = document.querySelector("#btnTable_2");
@@ -51,9 +53,8 @@ btnReviews_3.addEventListener("click", function(e) {
 
     sliderReviews.classList.remove("slider-reviews__inner--second");
     sliderReviews.classList.add("slider-reviews__inner--third");
-
-
 });
+
 // table 
 //=============================================
 btnTable_2.addEventListener("click", function(e) {
@@ -92,18 +93,18 @@ ymaps.ready(init);
 
 function init() {
     myMap = new ymaps.Map("map", {
-        center: [55.03292878, 73.25239250],
-        zoom: 15,
-        controls: []
-    }),
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: "Собственный значок метки"
-    }, {
-        iconLayout: "default#image",
+            center: [55.03292878, 73.25239250],
+            zoom: 15,
+            controls: []
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: "Собственный значок метки"
+        }, {
+            iconLayout: "default#image",
 
-        iconImageHref: "http://wp.vcu.edu/enochhale/wp-content/uploads/sites/4392/2014/06/rocket.png",
-        iconImageSize: [50, 50],
-        iconImageOffset: [-30, -30]
-    });
+            iconImageHref: "http://wp.vcu.edu/enochhale/wp-content/uploads/sites/4392/2014/06/rocket.png",
+            iconImageSize: [50, 50],
+            iconImageOffset: [-30, -30]
+        });
     myMap.geoObjects.add(myPlacemark);
 }

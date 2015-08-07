@@ -1,33 +1,114 @@
+/*******************************************************/
+
+
+/* write-us */
+
+
+/*******************************************************/
+
 .write-us {
-  .center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-family: @font-family;
-  color: @text-color;
-  text-align: center;
-  &__header {
-    margin-bottom: 35px;
-    font-weight: @weight-normal;
-    font-size: @font-size--big;
-    line-height: @font-size--big + .5;
-  }
-  &__phone,
-  &__write {
-    margin-bottom: 23px;
-  }
-  &__title {
-    margin-bottom: 10px;
-    font-size: @font-size--regular;
-    font-weight: @weight-bold;
-    line-height: @font-size--regular;
-  } 
-  &__tell,
-  &__mail, 
-  &__address {
-    font-size: @font-size--big;
-    font-weight: @weight-light;
-    line-height: @font-size--big + .5;
-    color: @text-color--red;
-    .a-decoration;
-  }
+    .center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: @font-family;
+    color: @text-color;
+    text-align: center;
+    @media @screen-lg {
+        //.debug;
+        padding: 0;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    &__wrapper {
+        .container;
+        //.debug;
+        .clearfix;
+    }
+    &__header {
+        margin-bottom: 35px;
+        padding: 0 5%;
+        font-weight: @weight-normal;
+        font-size: @font-size--big;
+        line-height: @font-size--big + .5;
+        @media @screen-md {
+            margin-bottom: 49px;
+            padding: 0 20%;
+            font-size: @font-size--big + 1.6;
+            line-height: @font-size--big + 2.2;
+        }
+        @media @screen-lg {
+            margin-bottom: 60px;
+            font-size: @font-size--big * 2 + .4;
+            line-height: @font-size--big * 2 + 1.4;
+            .clearfix;
+        }
+    }
+    &__phone,
+    &__write {
+        //.debug;
+        margin-bottom: 23px;
+        @media @screen-md {
+            margin-bottom: 47px;
+        }
+        @media @screen-lg {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 10px;
+        font-size: @font-size--regular;
+        font-weight: @weight-bold;
+        line-height: @font-size--regular;
+        @media @screen-lg {
+            margin-bottom: 27px;
+        }
+    }
+    &__tell,
+    &__mail,
+    &__address {
+        font-size: @font-size--big;
+        font-weight: @weight-light;
+        line-height: @font-size--big + .5;
+        color: @text-color--red;
+        .a-decoration;
+    }
+    &__phone {
+        @media @screen-md {
+            float: left;
+            width: 50%;
+        }
+        @media @screen-lg {
+            //.debug;
+            float: left;
+            width: 260px;
+            margin-left: 60px;
+        }
+    }
+    &__write {
+        @media @screen-md {
+            float: right;
+            width: 50%;
+        }
+        @media @screen-lg {
+            //.debug;
+            float: right;
+            width: 260px;
+            margin-right: 60px;
+        }
+    }
+    &__come {
+        padding: 4%;
+        @media @screen-md {
+            clear: both;
+            padding: 0 30%;
+        }
+        @media @screen-lg {
+            //.debug;
+            clear: none;
+            //float: right;
+            width: 300px;
+            padding: 0;
+            margin: 0 auto;
+        }
+    }
 }

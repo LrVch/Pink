@@ -1,16 +1,59 @@
+/*******************************************************/
+
+
+/* devices */
+
+
+/*******************************************************/
+
 .devices {
+    //.debug;
     margin-bottom: 25px;
     text-align: center;
     font-size: 0;
-    //.debug; //test
+    @media @screen-md {
+        margin-bottom: 35px;
+    }
+    @media @screen-lg {
+        margin-bottom: 52px;
+    }
     &__item {
+        //.debug;
         display: inline-block;
+        vertical-align: baseline;
         margin: 0;
         margin-right: 10.3%;
         padding: 0;
         font-size: @font-size--regular;
+        @media @screen-md {
+            margin-right: 35px;
+        }
         &:last-child {
             margin-right: 0;
         }
+        &--apple {
+            width: 46.21px;
+            height: 56.753px;
+        }
+        &-svg--apple {
+            width: 46px;
+            height: 56px;
+        }
+        &--android {
+            width: 42px;
+            height: 47px;
+        }
+        &-svg--android {
+            width: 42px;
+            height: 47px;
+        }
+        &-microsoft {
+            width: 44px;
+            height: 49px;
+        }
+        &-svg--microsoft {
+            width: 44px;
+            height: 49px;
+        }
     }
-} 
+}

@@ -1,7 +1,45 @@
+/*******************************************************/
+
+
+/* intro */
+
+
+/*******************************************************/
+
 .intro {
-  &__wrapper {
-    //.center;
-    //.debug;
-  }
-  
-} 
+    &__wrapper {
+        //.center;
+        //.debug;
+        .container;
+        background-image: url("@{dir}/iphone-hand-mobile@1x.png");
+        background-size: 258px auto;
+        background-position: left 93px;
+        background-repeat: no-repeat;
+        .center;
+        @media @retina {
+            background-image: url("@{dir}/iphone-hand-mobile@2x.png");
+        }
+        @media @screen-md {
+            background-image: url("@{dir}/iphone-hand-tablet@1x.png");
+            background-size: 700px auto;
+            background-position: center bottom;
+            @media @retina {
+                background-image: url("@{dir}/iphone-hand-tablet@2x.png");
+            }
+        }
+        @media @screen-lg {
+            background-image: url("@{dir}/iphone-hand-desktop@1x.png");
+            background-size: 1050px auto;
+            background-position: 30px 100px;
+            @media @retina {
+                background-image: url("@{dir}/iphone-hand-desktop@2x.png");
+            }
+        }
+    }
+    /* @media @screen-md {
+        //.debug;
+        //height: 620px;
+        //padding-top: 90px;
+        //padding-bottom: 55px;
+    }*/
+}

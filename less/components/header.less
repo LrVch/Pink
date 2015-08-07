@@ -1,8 +1,21 @@
+/*******************************************************/
+
+
+/* header */
+
+
+/*******************************************************/
+
 .header {
     background: fade(@backgoround-color--black, 50%);
     margin-bottom: 22px;
+    @media @screen-md {
+        margin-bottom: 0;
+    }
     &__wrapper {
         //.center; //test
+        .container;
+        //.debug;
     }
     &__inner {
         position: relative;
@@ -10,53 +23,121 @@
         padding: 0 6.25%;
         border-bottom: 1px solid transparent;
         .clearfix;
+        @media @screen-md {
+            min-height: 110px;
+            padding: 0 5.7%;
+        }
+        @media @screen-lg {
+            position: static;
+            min-height: 110px;
+            padding: 0;
+            border-bottom: none;
+        }
         &--state_active {
             border-bottom: 1px solid @backgoround-color--black;
             background: @backgoround-color--extra-dark;
         }
     }
     &__logo-link {
-        position: relative;
+        //.debug;
+        //position: relative;
         float: left;
-        &:before {
-            .pseudo-absolute-elem;
-            width: 74px;
-            height: 23px;
-            left: 0;
-            bottom: -43px;
-            background: url("@{dirsvg}/logo-main--mobile-white.svg") no-repeat;
+        width: 146px;
+        height: 40px;
+        margin-top: 5px;
+        margin-left: -71px;
+        //left: 0;
+        //bottom: -43px;
+        //background: url("@{dirsvg}/logo-main--mobile-white.svg") no-repeat;
+        @media @screen-md {
+            width: 146px;
+            height: 40px;
+            margin: 0;
+            margin-top: 28px;
+            //top: 25px;
+            //background: url("@{dirsvg}/logotype-white-tablet.svg") no-repeat;
         }
-    } 
+    }
+    &__logo {
+        width: 146px;
+        height: 40px;
+        &-star {
+            display: none;
+        }
+        &-glasses {
+            display: none;
+        }
+        @media @screen-md {
+            &-glasses {
+                display: block;
+                &-star {
+                    fill: #fff;
+                }
+            }
+        }
+        @media @screen-lg {
+            &-glasses {
+                display: block;
+                &-star {
+                    fill: #D22856;
+                }
+            }
+            &-star {
+                display: block;
+            }
+            &:hover {
+                .header__logo-glasses path {
+                    fill: #D22856;
+                }
+            }
+            &:active {
+                path, .header__logo-glasses path {
+                    fill: #ccc;
+                }
+            }
+        }
+    }
     &__toogle {
-        position: relative;
         float: right;
-        &:before {
-            .pseudo-absolute-elem;
+        @media @screen-lg {
+            display: none;
+        }
+        width: 50px;
+        height: 24px;
+        margin-top: 20px;
+        background: url("@{dirsvg}/btn-main-menu__mobile.svg") no-repeat;
+        @media @screen-md {
             width: 50px;
-            height: 24px;
-            right: 0;
-            bottom: -43px;
-            background: url("@{dirsvg}/btn-main-menu__mobile.svg") no-repeat;
+            height: 28px;
+            margin-top: 40px;
+            background: url("@{dirsvg}/btn-main-menu__tablet.svg") no-repeat;
         }
-        &:hover:before {
-            background: url("@{dirsvg}/btn-main-menu__mobile--hover.svg") no-repeat;
-        }
-        &:active:before {
+        &:active {
             background: url("@{dirsvg}/btn-main-menu__mobile--active.svg") no-repeat;
+            @media @screen-md {
+                background: url("@{dirsvg}/btn-main-menu__tablet--active.svg") no-repeat;
+            }
         }
         &--state_close {
-            &:before {
+            & {
                 width: 30px;
                 height: 30px;
                 right: 0;
-                bottom: -47px;
-                background: url("@{dirsvg}/icon-close.svg") no-repeat;
+                top: 17px;
+                background: url("@{dirsvg}/icon-close__mobile.svg") no-repeat;
+                @media @screen-md {
+                    width: 35px;
+                    height: 35px;
+                    right: 0;
+                    top: 37px;
+                    background: url("@{dirsvg}/icon-close__tablet.svg") no-repeat;
+                }
             }
-            &:hover:before {
-                background: url("@{dirsvg}/icon-close--hover.svg") no-repeat;
-            }
-            &:active:before {
-                background: url("@{dirsvg}/icon-close--active.svg") no-repeat;
+            &:active {
+                background: url("@{dirsvg}/icon-close__mobile--active.svg") no-repeat;
+                @media @screen-md {
+                    background: url("@{dirsvg}/icon-close__tablet--active.svg") no-repeat;
+                }
             }
         }
     }
