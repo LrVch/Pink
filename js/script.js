@@ -148,6 +148,8 @@ arrowLeft.addEventListener("click", function(e) {
 var startPoint = {};
 var nowPoint;
 var ldelay;
+var pdelay;
+var xAbs;
 sliderReviews.addEventListener('touchstart', function(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -164,13 +166,13 @@ sliderReviews.addEventListener('touchmove', function(event) {
     otk.x = nowPoint.pageX - startPoint.x;
     /*Обработайте данные*/
     /*Для примера*/
-    if (Math.abs(otk.x) > 150) {
+    if (Math.abs(otk.x) > 200) {
         if (otk.x < 0) {
             if (s <= lenghtUp) {
                 s++;
                 sw(s);
                 pgr(s);
-                //console.log("z+", z);
+                console.log("z+", s);
             };
         }
         if (otk.x > 0) {
@@ -178,7 +180,7 @@ sliderReviews.addEventListener('touchmove', function(event) {
                 s -= 1;
                 sw(s);
                 pgr(s);
-                //console.log("z-", z);
+                console.log("z-", s);
             };
         }
         startPoint = {
@@ -191,29 +193,26 @@ sliderReviews.addEventListener('touchmove', function(event) {
 sliderReviews.addEventListener('touchend', function(event) {
     event.preventDefault();
     event.stopPropagation();
-    var pdelay = new Date();
-    nowPoint = event.changedTouches[0];
-    var xAbs = Math.abs(startPoint.x - nowPoint.pageX);
-    var yAbs = Math.abs(startPoint.y - nowPoint.pageY);
-    if ((xAbs > 20 || yAbs > 20) && ((pdelay.getTime() - ldelay.getTime()) < 200)) {
-        if (xAbs > yAbs) {
-            if (nowPoint.pageX < startPoint.x) {
-                if (s <= lenghtUp) {
-                    s++;
-                    sw(s);
-                    pgr(s);
-                    console.log("s+", s);
-                };
-            } else {
-                if (s > 0) {
-                    s -= 1;
-                    sw(s);
-                    pgr(s);
-                    console.log("s-", s);
-                };
-            }
+    pdelay = new Date();
+    //nowPoint = event.changedTouches[0];
+    xAbs = Math.abs(startPoint.x - nowPoint.pageX);
+    if (xAbs > 50) {
+        if (nowPoint.pageX < startPoint.x) {
+            //alert("left");
+            if (s <= lenghtUp) {
+                s++;
+                sw(s);
+                pgr(s);
+                console.log("s+", s);
+            };
         } else {
-            if (nowPoint.pageY < startPoint.y) { /*СВАЙП ВВЕРХ*/ } else { /*СВАЙП ВНИЗ*/ }
+            //alert("right");
+            if (s > 0) {
+                s -= 1;
+                sw(s);
+                pgr(s);
+                console.log("s-", s);
+            };
         }
     }
 }, false);
