@@ -7,10 +7,10 @@
     <title>Pink</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script>
+    <script>
         //Picture element HTML5 shiv
         document.createElement("picture");
-    </script> -->
+    </script>
     <script src="js/picturefill.js" async></script>
     <noscript>
         <link rel="stylesheet" href="css/noscript.css">
@@ -21,7 +21,7 @@
     <svg style="display:none">
         <symbol viewBox="0 0 91.755 106.256" id="diagram">
             <g>
-                <text x="26" y="72" fill="#d22856" font-size="34" font-family="Open Sans" font-width="bold" stroke="#d22856" stroke-width="2">24</text>
+                <text x="26" y="72" fill="#d22856" font-size="34" font-family="Open Sans" stroke="#d22856" stroke-width="2">24</text>
                 <path class="features__img-diagram" fill="#eeeeee" d="M90.232,48.643c-1.675-6.36-4.68-12.181-8.706-17.146l2.638-2.637c1.87-1.871,1.87-4.905,0-6.773
 		c-1.027-1.028-2.395-1.434-3.734-1.334c-1.107,0.079-2.201,0.491-3.038,1.334l-2.637,2.636c-2.797-2.264-5.875-4.173-9.155-5.735
 		c-2.961-1.404-6.081-2.524-9.341-3.285c-0.027-0.005-0.063-0.005-0.096-0.012c-1.412-0.329-2.833-0.612-4.298-0.805v-2.458v-0.046
@@ -246,23 +246,29 @@
                 <div class="capabilities">
                     <figure class="capabilities__item  capabilities__item--hidden">
                         <picture>
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
                             <source media="(min-width: 1200px)" srcset="img/iphone-screen-desktop-1@1x.png, img/iphone-screen-desktop-1@2x.png 2x">
-                            <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png 2x">
-                            <img srcset="img/iphone-screen-mobile-3@1x.png, img/iphone-screen-mobile-3@2x.png 2x" alt="smile-photo" class="capabilities__img  ">
+                            <!--<source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png 2x">-->
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="#" alt="smile-photo" class="capabilities__img">
                         </picture>
                     </figure>
                     <figure class="capabilities__item  capabilities__item--hidden">
                         <picture>
-                            <source media="(min-width: 1200px)" srcset="img/iphone-screen-desktop-2@1x.png, img/iphone-screen-desktop-2@2x.png 2x">
-                            <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png 2x">
-                            <img srcset="img/iphone-screen-mobile-3@1x.png, img/iphone-screen-mobile-3@2x.png 2x" alt="smile-photo" class="capabilities__img">
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                            <source media="(min-width: 1200px)" srcset="img/iphone-screen-desktop-2@2x.png 2x">
+                            <!--<source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png 2x">-->
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="#" alt="smile-photo" class="capabilities__img">
                         </picture>
                     </figure>
                     <figure class="capabilities__item">
                         <picture>
-                            <source srcset="img/iphone-screen-desktop-3@1x.png, img/iphone-screen-desktop-3@2x.png 2x" media="(min-width:1200px)">
-                            <source srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png 2x" media="(min-width:700px)">
-                            <img srcset="img/iphone-screen-mobile-3@1x.png, img/iphone-screen-mobile-3@2x.png 2x" alt="smile-photo" class="capabilities__img">
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                            <source media="(min-width:1200px)" srcset="img/iphone-screen-desktop-3@1x.png, img/iphone-screen-desktop-3@2x.png 2x">
+                            <source media="(min-width:700px)" srcset="img/iphone-screen-tablet-3@1x.png, img/iphone-screen-tablet-3@2x.png 2x">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="img/iphone-screen-mobile-3@1x.png" srcset="img/iphone-screen-mobile-3@2x.png 2x" alt="smile-photo" class="capabilities__img">
                         </picture>
                     </figure>
                 </div>
@@ -297,17 +303,17 @@
                     <div class="slider-reviews__inner">
                         <article class="slider-reviews__item">
                             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                            <h1 class="slider-reviews__name">Николай Петров</h1>
+                            <h2 class="slider-reviews__name">Николай Петров</h2>
                             <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
                         </article>
                         <article class="slider-reviews__item">
                             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                            <h1 class="slider-reviews__name">Николай&nbsp;Петров-2</h1>
+                            <h2 class="slider-reviews__name">Николай&nbsp;Петров-2</h2>
                             <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
                         </article>
                         <article class="slider-reviews__item">
                             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                            <h1 class="slider-reviews__name">Николай&nbsp;Петров-3</h1>
+                            <h2 class="slider-reviews__name">Николай&nbsp;Петров-3</h2>
                             <div class="slider-reviews__user-info">25 лет, водитель трамвая</div>
                         </article>
                     </div>
@@ -373,9 +379,9 @@
     <!-- write-us -->
     <section class="write-us">
         <div class="write-us__wrapper">
-            <div class="write-us__header">
+            <header class="write-us__header">
                 Остались вопросы? Свяжитесь&nbsp;с&nbsp;нами!
-            </div>
+            </header>
             <div class="write-us__phone">
                 <header class="write-us__title">Звоните:</header><a href="tel:8(800)1000900" class="write-us__tell">8 (800) 1000 900</a>
             </div>
@@ -521,7 +527,6 @@
 	c-0.707,0.864-1.525,1.59-2.457,2.177c-0.932,0.593-2.119,0.883-3.563,0.883c-1.364,0-2.511-0.454-3.441-1.369
 	c-0.932-0.921-1.397-2.403-1.397-4.441c0-1.546,0.274-2.89,0.827-4.031c0.55-1.136,1.312-2.076,2.281-2.808
 	c0.917-0.707,2.098-1.382,3.541-2.025c1.442-0.644,2.899-1.211,4.368-1.71L46.024,54.032z" />
-                        </svg>
                         </svg>
                     </a>
                 </div>
