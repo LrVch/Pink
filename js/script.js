@@ -169,7 +169,7 @@ sliderReviews.addEventListener('touchmove', function(event) {
             if (s <= lenghtUp) {
                 s++;
                 sw(s);
-                //pgr(s);
+                pgr(s);
                 //console.log("z+", z);
             };
         }
@@ -177,7 +177,7 @@ sliderReviews.addEventListener('touchmove', function(event) {
             if (s > 0) {
                 s -= 1;
                 sw(s);
-                //pgr(s);
+                pgr(s);
                 //console.log("z-", z);
             };
         }
