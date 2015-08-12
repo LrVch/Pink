@@ -200,7 +200,7 @@ sliderReviews.addEventListener('touchend', function(event) {
         if (nowPoint.pageX < startPoint.x) {
             //alert("left");
             if (s <= lenghtUp) {
-                s++;
+                s++; 
                 sw(s);
                 pgr(s);
                 console.log("s+", s);
