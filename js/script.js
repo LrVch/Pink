@@ -1,4 +1,4 @@
-//(function() {
+(function() {
 
 var btnClose = document.querySelector(".header__toogle");
 var headerInner = document.querySelector(".header__inner");
@@ -90,7 +90,7 @@ function pgt(s) {
 
 // menu
 //=============================================
-btnClose.addEventListener("click", function(e) {
+btnClose.addEventListener("tap", function(e) {
     e.preventDefault();
     btnClose.classList.toggle("header__toogle--state_close");
     headerInner.classList.toggle("header__inner--state_active");
@@ -99,7 +99,7 @@ btnClose.addEventListener("click", function(e) {
 
 // reviews
 //============================================
-btnReviews_1.addEventListener("click", function(e) {
+btnReviews_1.addEventListener("tap", function(e) {
     e.preventDefault();
     var s = 0;
     sw(s);
@@ -107,7 +107,7 @@ btnReviews_1.addEventListener("click", function(e) {
 });
 
 //**************************************
-btnReviews_2.addEventListener("click", function(e) {
+btnReviews_2.addEventListener("tap", function(e) {
     e.preventDefault();
     var s = 1;
     sw(s);
@@ -115,7 +115,7 @@ btnReviews_2.addEventListener("click", function(e) {
 });
 
 //****************************************
-btnReviews_3.addEventListener("click", function(e) {
+btnReviews_3.addEventListener("tap", function(e) {
     e.preventDefault();
     var s = 2;
     sw(s);
@@ -194,13 +194,13 @@ sliderReviews.addEventListener('touchend', function(event) {
     event.preventDefault();
     event.stopPropagation();
     pdelay = new Date();
-    //nowPoint = event.changedTouches[0];
+    nowPoint = event.changedTouches[0];
     xAbs = Math.abs(startPoint.x - nowPoint.pageX);
     if (xAbs > 50) {
         if (nowPoint.pageX < startPoint.x) {
             //alert("left");
             if (s <= lenghtUp) {
-                s++; 
+                s++;
                 sw(s);
                 pgr(s);
                 console.log("s+", s);
@@ -219,7 +219,7 @@ sliderReviews.addEventListener('touchend', function(event) {
 
 // table 
 //=============================================
-btnTable_2.addEventListener("click", function(e) {
+btnTable_2.addEventListener("tap", function(e) {
     e.preventDefault();
     var s = 1;
     swt(s);
@@ -227,7 +227,7 @@ btnTable_2.addEventListener("click", function(e) {
 });
 
 /*************************************************/
-btnTable_1.addEventListener("click", function(e) {
+btnTable_1.addEventListener("tap", function(e) {
     e.preventDefault();
     var s = 0;
     swt(s);
@@ -235,13 +235,85 @@ btnTable_1.addEventListener("click", function(e) {
 });
 
 /*************************************************/
-btnTable_3.addEventListener("click", function(e) {
+btnTable_3.addEventListener("tap", function(e) {
     e.preventDefault();
     var s = 2;
     swt(s);
     pgt(s);
 });
 
+/*************************************************/
+var startPoint = {};
+var nowPoint;
+var ldelay;
+var pdelay;
+var xAbs;
+table.addEventListener('touchstart', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    startPoint.x = event.changedTouches[0].pageX;
+    startPoint.y = event.changedTouches[0].pageY;
+    ldelay = new Date();
+}, false);
+/*Ловим движение пальцем*/
+table.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    var otk = {};
+    nowPoint = event.changedTouches[0];
+    otk.x = nowPoint.pageX - startPoint.x;
+    /*Обработайте данные*/
+    /*Для примера*/
+    if (Math.abs(otk.x) > 200) {
+        if (otk.x < 0) {
+            if (s <= lenghtUp) {
+                s++;
+                swt(s);
+                pgt(s);
+                console.log("z+", s);
+            };
+        }
+        if (otk.x > 0) {
+            if (s > 0) {
+                s -= 1;
+                swt(s);
+                pgt(s);
+                console.log("z-", s);
+            };
+        }
+        startPoint = {
+            x: nowPoint.pageX,
+            y: nowPoint.pageY
+        };
+    }
+}, false);
+/*Ловим отпускание пальца*/
+table.addEventListener('touchend', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    pdelay = new Date();
+    nowPoint = event.changedTouches[0];
+    xAbs = Math.abs(startPoint.x - nowPoint.pageX);
+    if (xAbs > 50) {
+        if (nowPoint.pageX < startPoint.x) {
+            //alert("left");
+            if (s <= lenghtUp) {
+                s++;
+                swt(s);
+                pgt(s);
+                console.log("s+", s);
+            };
+        } else {
+            //alert("right");
+            if (s > 0) {
+                s -= 1;
+                swt(s);
+                pgt(s);
+                console.log("s-", s);
+            };
+        }
+    }
+}, false);
 
 // map
 //=================================================
@@ -267,4 +339,4 @@ function init() {
         });
     myMap.geoObjects.add(myPlacemark);
 }
-//})();
+})();

@@ -58,8 +58,7 @@
                 content: "";
                 width: 30px;
                 height: 30px;
-                background-repeat: no-repeat;
-                background-position: center center;
+                .sprites-img;
                 @media @screen-md {
                     left: 50%;
                     margin-left: -15px;
@@ -67,47 +66,47 @@
             }
             &-2--row-2 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-yes.svg");
+                    .sprites-pos > .icon-yes();
                 }
             }
             &-3--row-2 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-yes.svg");
+                    .sprites-pos > .icon-yes();
                 }
             }
             &-4--row-2 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-yes.svg");
+                    .sprites-pos > .icon-yes();
                 }
             }
             &-2--row-3 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-no.svg");
+                    .sprites-pos > .icon-no();
                 }
             }
             &-3--row-3 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-no.svg");
+                    .sprites-pos > .icon-no();
                 }
             }
             &-4--row-3 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-yes.svg");
+                    .sprites-pos > .icon-yes();
                 }
             }
             &-2--row-4 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-no.svg");
+                    .sprites-pos > .icon-no();
                 }
             }
             &-3--row-4 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-no.svg");
+                    .sprites-pos > .icon-no();
                 }
             }
             &-4--row-4 {
                 &:after {
-                    background-image: url("@{dirsvg}/icon-no.svg");
+                    .sprites-pos > .icon-no();
                 }
             }
             &:first-child {
@@ -176,9 +175,8 @@
             }
         }
         &__col-3--row-1 {
-            background-image: url("@{dirsvg}/hit.svg");
-            background-repeat: no-repeat;
-            background-position: 0 -3px;
+            .sprites-img;
+            .sprites-pos > .flag-new();
             @media @screen-md {
                 left: 0;
                 margin-left: 0;

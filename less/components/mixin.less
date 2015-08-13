@@ -72,3 +72,44 @@
 .debug() {
     outline: 1px solid #f0f;
 }
+
+.sprites-pos() {
+    .toogle-mb {
+        background-position: 0 0;
+    }
+    .toogle-mb--active {
+        background-position: 0 -32px;
+    }
+    .toogle-tb {
+        background-position: 0 -66px;
+    }
+    .toogle-tb--active {
+        background-position: 0 -102px;
+    }
+    .close-mb {
+        background-position: -70px 0;
+    }
+    .close-mb--active {
+        background-position: -70px -42px;
+    }
+    .close-tb {
+        background-position: -65px -87px;
+    }
+    .close-tb--active {
+        background-position: -65px -139px;
+    }
+    .icon-yes {
+        background-position: 0 -175px;
+    }
+    .icon-no {
+        background-position: 0 -140px;
+    }
+    .flag-new {
+        background-position: 0 -250px;
+    }
+}
+
+.sprites-img {
+    background-image: url("@{dirsvg}/sprite.svg");
+    background-repeat: no-repeat;
+}
