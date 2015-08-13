@@ -327,7 +327,9 @@
         for (var i = 0; i < linkNav.length; i++) {
             linkNav[i].addEventListener('tap', function(e) {
                 e.preventDefault();
-                btnCl();
+                btnClose.classList.remove("header__toogle--state_close");
+        headerInner.classList.remove("header__inner--state_active");
+        headerNav.classList.remove("header-nav--state_active");
                 var w = window.pageYOffset,
                     hash = this.href.replace(/[^#]*(.*)/, '$1');
                 t = document.querySelector(hash).getBoundingClientRect().top,
