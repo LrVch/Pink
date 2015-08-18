@@ -1,0 +1,252 @@
+/*******************************************************/
+
+
+/*page-footer */
+
+
+/*******************************************************/
+
+.page-footer {
+  &__wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    .center;
+    .clearfix;
+    .container;
+    //.debug;
+    @media @screen-md {
+      max-width: none;
+      margin: 0;
+      padding: 0 5.7%;
+      padding-top: 40px;
+      padding-bottom: 35px;
+    }
+    @media @screen-lg {
+      margin: 0 auto;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+  }
+  &__logo-wrapper {
+    //.debug;
+    float: left;
+
+    padding-left: 6.25%;
+    @media @screen-md {
+      //.debug;
+      float: left;
+
+      width: 35.48%;
+      margin-top: -7px;
+      padding: 0;
+    }
+  }
+  &__logo-link {
+    //.debug;
+    display: block;
+
+    width: 145px;
+    height: 40px;
+    margin-top: -6px;
+    margin-left: -71px;
+    @media @screen-md {
+      margin: 0;
+    }
+  }
+  &__logo {
+    width: 145px;
+    height: 40px;
+    &-star {
+      display: none;
+    }
+    &-glasses {
+      display: none;
+    }
+    @media @screen-md {
+      //width: 145px;
+      //height: 40px;
+      &-star {
+        display: none;
+      }
+      &-glasses {
+        display: block;
+      }
+    }
+    @media @screen-lg {
+      &-glasses {
+        display: block;
+        &-star {
+          fill: #d22856;
+        }
+      }
+      &-star {
+        display: block;
+      }
+      &:hover {
+        .page-footer__logo-glasses path {
+          fill: #000000;
+        }
+      }
+      &:active {
+        path,
+        .page-footer__logo-glasses path {
+          fill: #cccccc;
+        }
+      }
+    }
+  }
+  &__social-wrapper {
+    //.debug;
+    float: right;
+
+    padding-right: 6.25%;
+
+    font-size: 0;
+    @media @screen-md {
+      //.debug;
+      float: left;
+
+      width: 29%;
+      padding: 0;
+
+      text-align: center;
+    }
+  }
+  &__social-link {
+    //.debug;
+    display: inline-block;
+    vertical-align: top;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    font-size: @font-size--small;
+    @media @screen-md {
+      width: 44px;
+      height: 44px;
+      margin-right: 13px;
+
+      border: 3px solid #cccccc;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media @screen-lg {
+      &:hover {
+        border-color: @text-color--red;
+        .page-footer__social-link-img-path {
+          fill: lighten(@text-color--red, 20%);
+        }
+      }
+      &:active {
+        border-color: lighten(@text-color--red, 20%);
+        .page-footer__social-link-img-path {
+          fill: lighten(@text-color--red, 10%);
+        }
+      }
+    }
+    &-img {
+      margin-top: 50%;
+      margin-left: 50%;
+
+      transform: translate(-50%, -50%);
+      &--twitter {
+        width: 20px;
+        height: 19px;
+      }
+      &--fb {
+        width: 22px;
+        height: 19px;
+      }
+      &--vd {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+  &__copy-right-wrapper {
+    clear: both;
+
+    padding: 15px 0;
+
+    text-align: center;
+
+    font-size: 0;
+    @media @screen-md {
+      //.debug;
+      float: left;
+      clear: none;
+
+      width: 35.48%;
+      padding: 0;
+
+      text-align: right;
+
+      line-height: 50px;
+    }
+  }
+  &__by,
+  &__for {
+    //.debug;
+    display: inline-block;
+    vertical-align: baseline;
+
+    font-family: @font-family;
+    font-size: @font-size--small;
+    font-weight: @weight-normal;
+    line-height: @font-size--small;
+    @media @screen-md {
+      vertical-align: middle;
+    }
+    &-link {
+      display: inline-block;
+      vertical-align: middle;
+
+      width: 26px;
+      height: 34px;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      //.debug;
+      @media @screen-lg {
+        &:hover {
+          .page-footer__by-link-img path,
+          .page-footer__for-link-img path {
+            fill: lighten(@text-color--red, 20%);
+          }
+        }
+        &:active {
+          .page-footer__by-link-img path,
+          .page-footer__for-link-img path {
+            fill: lighten(@text-color--red, 30%);
+          }
+        }
+      }
+      &-img {
+        width: 26px;
+        height: 34px;
+        //.debug;
+      }
+      @media @screen-md {
+        margin-left: 11px;
+      }
+    }
+  }
+  &__by {
+    margin-right: 15px;
+  }
+  &__for {
+    margin-right: 10px;
+    @media @screen-md {
+      margin-right: 0;
+    }
+  }
+}

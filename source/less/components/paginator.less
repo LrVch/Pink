@@ -1,0 +1,45 @@
+/*******************************************************/
+
+
+/* paginator */
+
+
+/*******************************************************/
+
+.paginator {
+  text-align: center;
+
+  font-size: 0;
+  @media @screen-lg {
+    display: none;
+  }
+  &--reviews {
+    margin-top: 35px;
+  }
+  &--table {
+    margin-top: 50px;
+    @media @screen-md {
+      display: none;
+    }
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 6px;
+    height: 6px;
+    margin-right: 15px;
+
+    cursor: pointer;
+
+    border: 3px solid @backgoround-color--light;
+    border-radius: 50%;
+    background: darken(@backgoround-color--grey, 25%);
+
+    font-size: @font-size--regular;
+    &--state_active {
+      border-color: @backgoround-color--dark;
+      background: @backgoround-color--light;
+    }
+  }
+}

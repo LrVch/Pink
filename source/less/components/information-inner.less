@@ -1,0 +1,40 @@
+/*******************************************************/
+
+
+/* information-inner */
+
+
+/*******************************************************/
+
+.information-inner {
+  background-color: @backgoround-color--grey;
+  background-image: url("@{dirsvg}/triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% 40px;
+  @media @screen-md {
+    background-size: 100% 50px;
+  }
+  @media @screen-lg {
+    background-size: 100% 95px;
+  }
+  &__wrapper {
+    padding-top: 85px;
+
+    .center;
+    //.debug;
+    .container;
+    @media @screen-md {
+      padding: 0 5.7%;
+      //.debug;
+
+      .clearfix;
+    }
+    @media @screen-lg {
+      display: flex;
+      flex-direction: column-reverse;
+
+      padding: 0 10px;
+    }
+  }
+}

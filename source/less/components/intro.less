@@ -1,0 +1,46 @@
+/*******************************************************/
+
+
+/* intro */
+
+
+/*******************************************************/
+
+.intro {
+  &__wrapper {
+    background-image: url("@{dir}/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: left 93px;
+    background-size: 258px auto;
+
+    .center;
+    //.center;
+    //.debug;
+    .container;
+    @media @retina {
+      background-image: url("@{dir}/iphone-hand-mobile@2x.png");
+    }
+    @media @screen-md {
+      background-image: url("@{dir}/iphone-hand-tablet@1x.png");
+      background-position: center bottom;
+      background-size: 700px auto;
+      @media @retina {
+        background-image: url("@{dir}/iphone-hand-tablet@2x.png");
+      }
+    }
+    @media @screen-lg {
+      background-image: url("@{dir}/iphone-hand-desktop@1x.png");
+      background-position: 30px 100px;
+      background-size: 1050px auto;
+      @media @retina {
+        background-image: url("@{dir}/iphone-hand-desktop@2x.png");
+      }
+    }
+  }
+  /* @media @screen-md {
+        //.debug;
+        //height: 620px;
+        //padding-top: 90px;
+        //padding-bottom: 55px;
+    }*/
+}

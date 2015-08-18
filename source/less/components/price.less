@@ -1,0 +1,44 @@
+/*******************************************************/
+
+
+/* price */
+
+
+/*******************************************************/
+
+.price {
+  background-color: @backgoround-color--grey;
+  background-image: url("@{dirsvg}/triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% 35px;
+  @media @screen-md {
+    background-size: 100% 55px;
+  }
+  @media @screen-lg {
+    background-size: 100% 75px;
+  }
+  &__wrapper {
+    .center;
+    .container;
+    //.debug;
+  }
+  &__inner {
+    padding-top: 90px;
+    padding-bottom: 45px;
+    //background-image: url("@{dirsvg}/triangle-white.svg");
+    //background-size: 100% 35px;
+    //background-repeat: no-repeat;
+    //background-position: center 0;
+    @media @screen-md {
+      padding-right: 6.25%;
+      padding-bottom: 68px;
+      padding-left: 6.25%;
+    }
+    @media @screen-lg {
+      padding: 0;
+      padding-top: 140px;
+      padding-bottom: 95px;
+    }
+  }
+}

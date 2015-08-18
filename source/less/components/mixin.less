@@ -1,0 +1,125 @@
+.clearfix() {
+  &:after,
+  &:before {
+    display: table;
+
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/*.container() {
+    margin: 0 auto;
+    @media @screen-md {
+        widht: 700px;
+        margin: 0 auto;
+    }
+    @media @screen-lg {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}*/
+
+.container() {
+  @media @screen-lg {
+    box-sizing: border-box;
+    width: 960px;
+    //max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+.big-headers-text-style () {
+  text-align: center;
+
+  font-size: @font-size--big;
+  font-weight: @weight-light;
+}
+
+.headers-text-style () {
+  text-align: center;
+
+  font-size: @font-size--regular;
+  font-weight: @weight-semi-bold;
+}
+
+.p-text-style () {
+  text-align: left;
+
+  font-size: @font-size--small;
+  font-weight: @weight-normal;
+}
+
+.a-decoration() {
+  text-decoration: none;
+}
+
+.pseudo-absolute-elem() {
+  position: absolute;
+
+  display: block;
+
+  content: "";
+}
+
+.border-style (@b-size: 2px, @b-type: solid, @b-color: #e5e5e5) {
+  border: @arguments;
+}
+
+.center() {
+  //test
+  //max-width: 700px;
+  //margin: 0 auto;
+}
+
+.debug() {
+  outline: 1px solid #ff00ff;
+}
+
+.sprites-pos() {
+  .toogle-mb {
+    background-position: 0 .2%;
+  }
+  .toogle-mb--active {
+    background-position: 0 7.8923076923076925%;
+  }
+  .toogle-tb {
+    background-position: 0 15.876323987538942%;
+  }
+  .toogle-tb--active {
+    background-position: 0 24.910591900311526%;
+  }
+  .close-mb {
+    background-position: 0 33.85579937304075%;
+  }
+  .close-mb--active {
+    background-position: 0 43.573667711598745%;
+  }
+  .close-tb {
+    background-position: 0 54.140127388535035%;
+  }
+  .close-tb--active {
+    background-position: 0 65.60509554140127%;
+  }
+  .icon-yes {
+    background-position: 0 84.01253918495298%;
+  }
+  .icon-no {
+    background-position: 0 75.59135802469135%;
+  }
+  .flag-new {
+    background-position: 0 118%;
+  }
+  .flag-new-lg {
+    background-position: 0 109%;
+  }
+}
+
+.sprites-img {
+  background-image: url("@{dirsvg}/sprite.svg");
+  background-repeat: no-repeat;
+}

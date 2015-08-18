@@ -1,0 +1,118 @@
+/*******************************************************/
+
+
+/* header-nav */
+
+
+/*******************************************************/
+
+.header-nav {
+  position: absolute;
+  top: 66px;
+  left: -100%;
+
+  width: 100%;
+
+  transition: .3s;
+  @media @screen-md {
+    top: 111px;
+  }
+  @media @screen-lg {
+    position: static;
+
+    float: right;
+    //.debug;
+
+    width: 608px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    font-size: 0;
+    &-item {
+      min-height: 62px;
+
+      list-style-type: none;
+
+      text-align: center;
+
+      border-top: 1px solid lighten(@backgoround-color--extra-dark, 12%);
+      border-bottom: 1px solid darken(@backgoround-color--extra-dark, 20%);
+      background: @backgoround-color--extra-dark;
+      @media @screen-lg {
+        display: inline-block;
+        vertical-align: top;
+
+        min-height: 110px;
+        margin-right: 70px;
+
+        border: none;
+        background: transparent;
+
+        font-size: @font-size--regular;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      a {
+        //.debug;
+        display: block;
+
+        text-transform: uppercase;
+
+        color: @text-color--white;
+
+        font-family: @font-family;
+        font-size: @font-size--regular;
+        line-height: 62px;
+
+        .a-decoration;
+        @media @screen-lg {
+          position: relative;
+
+          display: inline;
+
+          text-transform: inherit;
+
+          line-height: 106px;
+          &:hover {
+            color: @text-color--white;
+            &:before {
+              bottom: -7px;
+              left: 50%;
+
+              width: 100%;
+              height: 3px;
+
+              transition: .1s;
+              transform: translateX(-50%);
+
+              background: @text-color--white;
+
+              .pseudo-absolute-elem;
+            }
+          }
+        }
+        &:active {
+          color: darken(@text-color--red, 20%);
+          @media @screen-lg {
+            color: darken(@text-color--white, 30%);
+            &:before {
+              background: darken(@text-color--white, 30%);
+            }
+          }
+        }
+      }
+      &:active {
+        background: lighten(@backgoround-color--extra-dark, 10%);
+        @media @screen-lg {
+          background: transparent;
+        }
+      }
+    }
+  }
+  &--state_active {
+    left: 0%;
+  }
+}
